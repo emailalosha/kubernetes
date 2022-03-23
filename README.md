@@ -16,3 +16,30 @@ IAM -- > Users -- > click on your user -- > Permission -- > Add permission -- > 
 
 eksctl create cluster --name raining-demo-01 --region=ap-south-1 --zones=ap-south-1a,ap-south-1b --without-nodegroup
 
+# Now map associate-oidc-iam-provider to the cluster you have created 
+
+eksctl utils associate-iam-oidc-provider --region=ap-south-1 --cluster=raining-demo-01 --approve
+
+# Now we are all set to create nodegroup 
+
+# But before that login to AWS console and create keypair which we will be using to map EC2 node (only if you want to access it remotely)
+
+eksctl create nodegroup --name=raining-demo-01-ng-01 \
+--node-type=t2.small \
+--nodes=2 \
+--nodes-min=2 \
+--nodes-max=3 \
+--node-volume-size=20 \
+--ssh-access \
+--managed \
+--asg-access  \
+--external-dns-access \
+--full-ecr-access \
+--alb-ingress-access  \
+--appmesh-access  \
+--cluster=raining-demo-01 \
+--region=ap-south-1 \
+--ssh-public-key=generic  \
+--node-labels=k1=v1,k2=v2,k3=v3
+
+
