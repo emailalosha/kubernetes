@@ -12,3 +12,7 @@ Also map one more policy to the user
 IAM -- > Users -- > click on your user -- > Permission -- > Add permission -- > Attach existing policy directly -- > search for admin -- > select administratoraccess -- > review and add permission
 
 
+# lets create cluster without nodegroup initially 
+
+eksctl create cluster --name raining-demo-01 --region=ap-south-1 --zones=ap-south-1a,ap-south-1b --without-nodegroup
+
