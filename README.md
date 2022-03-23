@@ -83,7 +83,7 @@ roleRef:
   name: developer-clusterrole
   apiGroup: rbac.authorization.k8s.io
   
-  
+  kind: ClusterRole is for cluster and kind: Role is for namespace
 
 
 
