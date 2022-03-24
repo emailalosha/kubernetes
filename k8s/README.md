@@ -1,9 +1,9 @@
-# K8s
+                                                                                  # K8s
+ 
 
-Kubernetes 
+# Minikube is a single node Kubernetes cluster where you can hands on fundamental kubernetes. 
 
-Minikube is a single node Kubernetes cluster where you can hadson fundamental kubernetes. 
-
+ -- Once you are done with installation and configuration on minikube 
 minikube start --vm-driver=hyperkit
 
 
@@ -50,15 +50,15 @@ spec:
        - containerPort: 80
 
 
-apiVersion you need to refer to kubernetes doc. 
-kind refers to the kind of kubernetes object you wanted to manage. 
-metadata will have meta information (name, label etc.) about the kubernetes object. 
+# apiVersion you need to refer to kubernetes doc. 
+# kind refers to the kind of kubernetes object you wanted to manage. 
+# metadata will have meta information (name, label etc.) about the kubernetes object. 
 
-All of the above are mandatory keys present in all kubernetes objects. 
+# These three - apiVersion, kind and metadata makes skelton of kuberenetes object's yaml declerartion
 
 spec is where we need to define what exactly we are trying to manage using this kubernetes object. E.g. For Pod objects we need to define containers within spec. And containers needs details like name, image, ports etc. 
 
-Pod has a limitation, where assigned IP is getting changed with each restart. And hence we need some sort of other object on top of POD which can connect with it internally and expose connectivity to the external world. This can be done using service or Node service. 
+# Pod has a limitation, where assigned IP is getting changed with each restart. And hence we need some sort of other object on top of POD which can connect with it internally and expose connectivity to the external world. This can be done using service or Node service. 
 
 Aloks-MacBook-Pro:kubernetes alokk$ kubectl get po -o wide
 NAME                READY   STATUS    RESTARTS   AGE    IP           NODE       NOMINATED NODE   READINESS GATES
@@ -70,8 +70,6 @@ Also by using Pod we can define a single pod, however to create replicas we can 
 
 kubectl create -f pod-definition.yml 
 Above command is going to create and run the pod. 
-
-
 
 Steps going to execute at pod level (high level)
 
@@ -114,8 +112,7 @@ spec:
            - containerPort: 80
 
 
-
-Within spec: matchLabels reference to label of Pod and replicas is number of replica pods we wanted to create within kubernetes cluster. And the template is Pod information. 
+# Within spec: matchLabels reference to label of Pod and replicas is number of replica pods we wanted to create within kubernetes cluster. And the template is Pod information. 
 
 kubectl create -f replicaset-definition.yml
 
