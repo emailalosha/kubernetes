@@ -16,7 +16,7 @@ IAM -- > Users -- > click on your user -- > Permission -- > Add permission -- > 
 
 eksctl create cluster --name raining-demo-01 --region=ap-south-1 --zones=ap-south-1a,ap-south-1b --without-nodegroup
 
-# Now map associate-oidc-iam-provider to the cluster you have created 
+# Now map associate-iam-oidc-provider to the cluster you have created 
 
 eksctl utils associate-iam-oidc-provider --region=ap-south-1 --cluster=raining-demo-01 --approve
 
