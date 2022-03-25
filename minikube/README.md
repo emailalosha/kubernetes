@@ -13,3 +13,7 @@ $oldPath = [Environment]::GetEnvironmentVariable('Path', [EnvironmentVariableTar
 if ($oldPath.Split(';') -inotcontains 'C:\minikube'){ `
   [Environment]::SetEnvironmentVariable('Path', $('{0};C:\minikube' -f $oldPath), [EnvironmentVariableTarget]::Machine) `
 }
+
+# Open cmd and invoke below command to start minikube
+
+minikube start
