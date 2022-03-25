@@ -30,6 +30,8 @@ kubectl config set-context --current --namespace=namespace_name
 
 kubectl config set-context --current --namespace=raining-lab
 
+When we are doing this change HOME/.kube/config files gets modified with namespace value with raining-lab. Actually this config files haing the details like the cluster URL and user and certs details. 
+
 
 Pod is the smallest unit of the Kubernetes cluster. You can say it is a wrapper around a container. Within a pod it is recommended to have only one container. Sometimes in exceptional scenarios we may have more than one container within a pod, and that too with one of the containers acting as helper for the main container. Helper refers to push or pull of data used by the main container etc. 
 
@@ -53,6 +55,21 @@ spec:
      ports:
        - containerPort: 80
 
+To create a pod simply run 
+
+kubectl create -f pod.yml
+
+To delete the same pod 
+
+kubectl delete -f pod.yml
+
+Or 
+
+By using pod_name also we can delete 
+
+kubectl get po -o wide (To get pod details)
+
+kubectl delete pod pod_name
 
 # apiVersion you need to refer to kubernetes doc. 
 # kind refers to the kind of kubernetes object you wanted to manage. 
