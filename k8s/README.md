@@ -21,11 +21,13 @@ Get all namaspaces
 kubectl get namespace/ns
 
 Create a namespace 
+
 kubectl create namespace namespace_name/raining-lab
 
 Setting namespace preference 
 
 kubectl config set-context --current --namespace=namespace_name
+
 kubectl config set-context --current --namespace=raining-lab
 
 
