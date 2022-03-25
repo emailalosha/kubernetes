@@ -138,6 +138,37 @@ spec:
 kubectl create -f replicaset-definition.yml
 
 Above command is going to create replicaset, and associated Pod within kubernetes cluster. 
+  
+  
+  
+# It is always recommended to use Deployment rather than ReplicaSet
+  
+ apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: nginx-webserver-depl-1 # this is the deployment name, pod will also be generate with the same name concatenated with some random value on top of deployment name
+ labels:
+   app: nginx-webserver-depl-1-label-1
+spec:
+ replicas: 2
+ selector:
+   matchLabels:
+     app: nginx-webserver-label1 # ReplicaSet will search the pod with this label and create replica for the same 
+ template:
+   metadata:
+     name: nginx-webserver
+     labels:
+       app: nginx-webserver-label1 # this is the identity of the pod, needs to be unique within any namespace
+   spec:
+     containers:
+       - name: nginx-webserver-container1 # container within pod will have this name
+         image: nginx:latest
+         ports:
+           - containerPort: 80
+
+
+
+  
 
 kubectl get rs
 kubectl get rs -o wide
