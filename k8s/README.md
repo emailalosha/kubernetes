@@ -4,6 +4,7 @@
 # Minikube is a single node Kubernetes cluster where you can hands on fundamental kubernetes. 
 
  -- Once you are done with installation and configuration on minikube 
+ 
 minikube start --vm-driver=hyperkit
 
 
