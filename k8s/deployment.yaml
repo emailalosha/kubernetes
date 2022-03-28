@@ -19,9 +19,16 @@ spec:
           ports: 
             - containerPort: 80
           env:
-            - name: from-secrets
-              valueFrom: 
-                secretKeyRef: 
-                  name: raining-lab-secret-1
-                  key: username
-                  optional: true
+            - name: author
+              valueFrom:
+                secretKeyRef:
+                  name: raining-lab-secrets-1
+                  key: author
+                  optional: false
+            - name: APP_URI
+              valueFrom:  
+                configMapKeyRef:
+                  name: raining-lab-config
+                  key: appUri
+                  optional: false
+              
