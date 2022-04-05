@@ -12,7 +12,7 @@ Login to management console and create a user with programtic access
 
 Also map one more policy to the user 
 
-                    IAM -- > Users -- > click on your user -- > Permission -- > Add permission -- > Attach existing policy directly -- > search for admin -- > select administratoraccess -- > review and add permission
+          IAM -- > Users -- > click on your user -- > Permission -- > Add permission -- > Attach existing policy directly -- > search for admin -- > select administratoraccess -- > review and add permission
 
 
 # lets create cluster without nodegroup initially 
