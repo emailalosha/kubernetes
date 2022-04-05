@@ -1,6 +1,9 @@
 # kubernetes
 This repository has all the details and understanding required for Kubernetes and EKS - ECS
 
+# Configure AWS to access aws from your local system 
+          aws configure
+
 # Define an admin user with privilege to create / delete / manage EKS cluster
 
 Login to management console and create a user with programtic access 
