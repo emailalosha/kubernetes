@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: raining-lab-depl-1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: raining-lab-pod-label
+  template:
+    metadata:
+      name: raining-lab-pod 
+      labels:
+        app: raining-lab-pod-label
+    spec:
+      containers:
+        - name: raining-lab-container
+          image: nginx
+          ports: 
+            - containerPort: 80
+          env:
+            - name: author
+              valueFrom:
+                secretKeyRef:
+                  name: raining-lab-secrets-1
+                  key: author
+                  optional: false
+            - name: APP_URI
+              valueFrom:  
+                configMapKeyRef:
+                  name: raining-lab-config
+                  key: appUri
+                  optional: false
+              
