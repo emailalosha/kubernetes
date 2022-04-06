@@ -19,7 +19,7 @@ Now create iam user, first try to find all applicable options using help
         aws iam list-groups
         aws iam create-group --group-name eks-managed-grp
         aws iam create-user --user-name eks-cluster-admin
-                output:
+                *output:
                 {
                 "User": {
                     "Path": "/",
