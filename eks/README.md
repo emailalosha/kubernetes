@@ -10,4 +10,4 @@
 
 Once done with these changes, execute below command which will ask for access key ID and access secret key
 
-  aws configure
+    aws configure
