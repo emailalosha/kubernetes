@@ -11,3 +11,21 @@
 Once done with these changes, execute below command which will ask for access key ID and access secret key
 
     aws configure
+
+Now create iam user, first try to find all applicable options using help 
+
+        aws iam help
+        aws iam list-users
+        aws iam list-groups
+        aws iam create-group --group-name eks-managed-grp
+        aws iam create-user --user-name eks-cluster-admin
+                output:
+                {
+                "User": {
+                    "Path": "/",
+                    "UserName": "eks-cluster-admin",
+                    "UserId": "AIDASVVPYX4GITP7OG2DR",
+                    "Arn": "arn:aws:iam::183978475276:user/eks-cluster-admin",
+                    "CreateDate": "2022-04-06T14:54:42+00:00"
+                }
+            }
