@@ -4,6 +4,7 @@
 # Minikube is a single node Kubernetes cluster where you can hands on fundamental kubernetes. 
 
  -- Once you are done with installation and configuration on minikube 
+ 
 minikube start --vm-driver=hyperkit
 
 
@@ -20,11 +21,16 @@ Get all namaspaces
 kubectl get namespace/ns
 
 Create a namespace 
+
 kubectl create namespace namespace_name/raining-lab
 
 Setting namespace preference 
+
 kubectl config set-context --current --namespace=namespace_name
+
 kubectl config set-context --current --namespace=raining-lab
+
+When we are doing this change HOME/.kube/config files gets modified with namespace value with raining-lab. Actually this config files haing the details like the cluster URL and user and certs details. 
 
 
 Pod is the smallest unit of the Kubernetes cluster. You can say it is a wrapper around a container. Within a pod it is recommended to have only one container. Sometimes in exceptional scenarios we may have more than one container within a pod, and that too with one of the containers acting as helper for the main container. Helper refers to push or pull of data used by the main container etc. 
@@ -49,6 +55,21 @@ spec:
      ports:
        - containerPort: 80
 
+To create a pod simply run 
+
+kubectl create -f pod.yml
+
+To delete the same pod 
+
+kubectl delete -f pod.yml
+
+Or 
+
+By using pod_name also we can delete 
+
+kubectl get po -o wide (To get pod details)
+
+kubectl delete pod pod_name
 
 # apiVersion you need to refer to kubernetes doc. 
 # kind refers to the kind of kubernetes object you wanted to manage. 
@@ -117,6 +138,37 @@ spec:
 kubectl create -f replicaset-definition.yml
 
 Above command is going to create replicaset, and associated Pod within kubernetes cluster. 
+  
+  
+  
+# It is always recommended to use Deployment rather than ReplicaSet
+  
+ apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: nginx-webserver-depl-1 # this is the deployment name, pod will also be generate with the same name concatenated with some random value on top of deployment name
+ labels:
+   app: nginx-webserver-depl-1-label-1
+spec:
+ replicas: 2
+ selector:
+   matchLabels:
+     app: nginx-webserver-label1 # ReplicaSet will search the pod with this label and create replica for the same 
+ template:
+   metadata:
+     name: nginx-webserver
+     labels:
+       app: nginx-webserver-label1 # this is the identity of the pod, needs to be unique within any namespace
+   spec:
+     containers:
+       - name: nginx-webserver-container1 # container within pod will have this name
+         image: nginx:latest
+         ports:
+           - containerPort: 80
+
+
+
+  
 
 kubectl get rs
 kubectl get rs -o wide
