@@ -29,3 +29,8 @@ Now create iam user, first try to find all applicable options using help
                     "CreateDate": "2022-04-06T14:54:42+00:00"
                 }
             }
+
+Now assign group membership to the user 
+
+        aws iam add-user-to-group --group-name eks-managed-gr --user-name eks-cluster-admin
+        
