@@ -12,7 +12,12 @@
 ### First time login to - https://my.jfrog.com/ , click on forgot password. Provide your email (the one provided at cloud subscription) it will send a link to your email. Register by clicking the email sent by jFrog. Finally put password and login to https://my.jfrog.com/. Here you can see your cloud subscription for jFrog
 
 
+#### On left hand side you will see two tab, one for administrator and other for aapplications. Administrator can create repository, and manage other settings. 
 
+    Adminstrations -- Artifactory -- General -- Settings (To manage file upload settings and all)
+   #
+    Adminstrations -- Artifactory -- Import and Export -- 
+    Upload files in selected repository (Make sure to zip file on top of zip so that zip file will be available on artifactory)
 
 
 
