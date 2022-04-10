@@ -16,6 +16,23 @@
 
     Adminstrations -- Artifactory -- General -- Settings (To manage file upload settings and all)
    #
+     Adminstrations -- Repositories -- repositories -- on right hand side
+     create create local  repo (select generic, incase you want to manage files or folders) 
+     
+   #
+     Adminstrations -- Repositories -- repositories -- on right hand side
+     create create local  repo (select docker, incase you want to manage docker images) 
+     
+   #
+     Adminstrations -- Repositories -- repositories -- on right hand side
+     create create remote  repo (select docker, incase you want to manage docker images and on some  remote loc. 
+     go for default incase you dont have much info) 
+     
+   #
+     Adminstrations -- Repositories -- repositories -- on right hand side
+     create create virtual  repo (select docker, put local first and remote next, also default repo should be local only) 
+     
+   #
     Adminstrations -- Artifactory -- Import and Export -- 
     Upload files in selected repository (Make sure to zip file on top of zip so that zip file will be available on artifactory)
 
