@@ -36,6 +36,25 @@
     Adminstrations -- Artifactory -- Import and Export -- 
     Upload files in selected repository (Make sure to zip file on top of zip so that zip file will be available on artifactory)
 
+## How to push image on jFrog artifactory?
+
+Logout from existing session
+
+        docker logout
+        
+Login to jFrog cloud aartifactory
+
+    docker login reedauthorized.jfrog.io
+  
+Retag local images with your container registry repository
+
+    docker tag {local_image}:{tag} reedauthorized.jfrog.io/{repo_name}/{image-name}:{version}
+    docker tag java11:1.0 reedauthorized.jfrog.io/docker-virtual-repo/jfrog-java11
+    
+Push image to artifactory 
+
+    docker push awsdevopsartifactory.jfrog.io/docker-virtual-repo/jfrog-java11
+  
 
 
 
