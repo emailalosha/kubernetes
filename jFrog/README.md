@@ -1,1 +1,1 @@
-#Jfrog as package manager and docker image repository #
+#Jfrog as package manager and docker image repository
