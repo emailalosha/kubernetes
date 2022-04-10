@@ -6,6 +6,11 @@ This repository has all the details and understanding required for Kubernetes an
 
 # Define an admin user with privilege to create / delete / manage EKS cluster
 
+Login to management console and create a user with programtic access <br/>
+=======
+The account which will be used to create eks cluster, by default going to be admin within kubermetes cluster of EKS. In day to day scenerios we need to have RBAC role created and associated with users/groups. 
+
+Login to management console and create a user with programtic access 
 
 
           IAM -- > Users -- > Add Users -- > Provide name and select programmatic access (this is because we dont 
