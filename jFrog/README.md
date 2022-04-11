@@ -55,6 +55,11 @@ Push image to artifactory
 
     docker push awsdevopsartifactory.jfrog.io/docker-virtual-repo/jfrog-java11
   
+How to remove image from local docker repo
+
+        docker rmi ${image_repository}:${tag} 
+        docker rmi ${image_repository_1}:${tag_1} ${image_repository_2}:${tag_2} 
+        
 
 
 
