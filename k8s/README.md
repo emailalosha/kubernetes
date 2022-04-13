@@ -269,3 +269,8 @@ kubectl exec --stdin --tty shell-demo -- /bin/bash
 # Only a specific pod should be scheduled on a particular node 
   
   nodeSelector along with taints has to be used
+
+### How to check info about any options within kubectl 
+  
+    kubectl explain {resource_type}.
+    kubectl explain Deployment.spec
