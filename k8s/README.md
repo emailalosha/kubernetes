@@ -274,3 +274,4 @@ kubectl exec --stdin --tty shell-demo -- /bin/bash
   
     kubectl explain {resource_type}.
     kubectl explain Deployment.spec
+    kubectl explain pvc.spec
