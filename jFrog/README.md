@@ -45,6 +45,14 @@ Logout from existing session
 Login to jFrog cloud aartifactory
 
     docker login reedauthorized.jfrog.io
+    docker login -u testing -p Jaimatadi211@ awsdevopsartifactory.jfrog.io
+    WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+    WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+    Configure a credential helper to remove this warning. See
+    https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+    Login Succeeded
+
   
 Retag local images with your container registry repository
 
