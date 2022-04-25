@@ -53,9 +53,13 @@ Login to jFrog cloud aartifactory
 
     Login Succeeded
 
+Tag locally - it will search for Dockerfile in the current directory and build the image and host it locally using the given tag. You can make use of -f option if you need to redirect for Dockerfile at some other location
+
+    docker build -t image_name:tag .
   
 Retag local images with your container registry repository
 
+    
     docker tag {local_image}:{tag} reedauthorized.jfrog.io/{repo_name}/{image-name}:{version}
     docker tag java11:1.0 reedauthorized.jfrog.io/docker-virtual-repo/jfrog-java11
     
