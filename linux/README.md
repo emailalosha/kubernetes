@@ -2,8 +2,9 @@
 ***
 
 ## To start and stop services
-```
-systemctl stop/start/enable/disable firewalld
-systemctl stop/start/enable/disable NetworkManager
-systemctl enable/start/stop docker
-```
+    systemctl stop/start/enable/disable firewalld
+    systemctl stop/start/enable/disable NetworkManager
+    systemctl enable/start/stop docker
+
+## Content of /etc/resolv.conf
+    nameserver 192.168.0.1
