@@ -33,3 +33,17 @@ Provide instructions on how to collaborate with your project.
 > This is how you do it.
  
   
+  
+I wanted to see myself -
+Will be in a position to single handed deliver any requirement within Directory Services space. 
+Able to deploy new DS services into cloud - EKS and complete data migration 
+Help architecure team to come with the solution which is more efficient, robust and future oriented. 
+Able to complete all mandatory learning and training on / before time. 
+Have proper documentation and knowledge transfer aligned so that new member can be onboarded with minimal effort, and can be utilized quickly.
+
+
+Aspirational goal
+CISSP training, will help me and organization to better design the environment on security paradiagm. 
+TOGAF will help me and team to suggest better design 
+Cloud certification, will help me and team for better desing and working style
+
