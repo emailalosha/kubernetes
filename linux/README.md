@@ -47,6 +47,11 @@ NETMASK=255.255.255.0
         
 ## To add a user - jenkins into group - docker
         usermod -a -G docker jenkins
+
+> How to make sure bridge network works fine in VM Workstation
+
+        Open VM workstation -- Edit -- Virtual Network Editor -- click on change settings (right below)
+        -- within VMnet Information -- select bridge to -- the wireless adapter
         
 
 
