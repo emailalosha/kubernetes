@@ -12,8 +12,9 @@ Above command execution is going to give us Jenkin master or controller. This wo
 #### With enhanced supportability from Jenkins, now we are able to spin up ephemeral docker slave or agent which can be live / or start based on on-demand basis. 
 
 # Pre-requisite for docker agent / slave
+***
 
-    docker plugin
+    * docker plugin
     If you are going to use separate docker enabled host, to have your docker agent / slave. In that case we need to enable docker API on that host. 
     
 
