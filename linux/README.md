@@ -55,7 +55,7 @@ NETMASK=255.255.255.0
         
 ## How to check wireless adapter is getting used..
 
-            ![image](https://user-images.githubusercontent.com/63675131/165819709-682a60a2-56f0-4414-90c1-1b402e74c5eb.png)
-
+        
+![Untitled](https://user-images.githubusercontent.com/63675131/165819921-a6286cc4-fd1e-4ca5-9266-e0e42bc47c17.png)
 
 
