@@ -53,6 +53,9 @@ NETMASK=255.255.255.0
         Open VM workstation -- Edit -- Virtual Network Editor -- click on change settings (right below)
         -- within VMnet Information -- select bridge to -- the wireless adapter
         
+## How to check wireless adapter is getting used..
+
+            ![image](https://user-images.githubusercontent.com/63675131/165819709-682a60a2-56f0-4414-90c1-1b402e74c5eb.png)
 
 
 
