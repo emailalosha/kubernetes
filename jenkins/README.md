@@ -47,3 +47,14 @@ CISSP training, will help me and organization to better design the environment o
 TOGAF will help me and team to suggest better design 
 Cloud certification, will help me and team for better desing and working style
 
+# How to create a separate node as the environment to act as jenkins agent ?
+***
+## Pre-requisite
+* Node needs to have ssh connectivity, and within home directory of the user you need to create .ssh directory and need to copy public key into authorized_keys
+* Below command will give you public and private key
+```
+ssh-keygen -b 2048 -t rsa
+```
+* private key you need to share with client, which they can use as an identity file (_ssh -i_)
+* 
+
