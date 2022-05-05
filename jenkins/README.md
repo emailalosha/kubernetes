@@ -41,12 +41,6 @@ Help architecure team to come with the solution which is more efficient, robust 
 Able to complete all mandatory learning and training on / before time. 
 Have proper documentation and knowledge transfer aligned so that new member can be onboarded with minimal effort, and can be utilized quickly.
 
-
-Aspirational goal
-CISSP training, will help me and organization to better design the environment on security paradiagm. 
-TOGAF will help me and team to suggest better design 
-Cloud certification, will help me and team for better desing and working style
-
 # How to create a separate node as the environment to act as jenkins agent ?
 ***
 ## Pre-requisite
@@ -57,6 +51,7 @@ ssh-keygen -b 2048 -t rsa
 ```
 * private key you need to share with client, which they can use as an identity file (_ssh -i_)
 * Now we are good to add node from UI
+* You need java 8 or java 11 on system, make sure to access it from /usr/bin/java
 ```
 Manage Jenkins -- Manage nodes and cloud -- New node -- Node name : whatever best suits and type : permanent agent 
 In the second screen 
