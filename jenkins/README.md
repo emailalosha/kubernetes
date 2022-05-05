@@ -56,5 +56,20 @@ Cloud certification, will help me and team for better desing and working style
 ssh-keygen -b 2048 -t rsa
 ```
 * private key you need to share with client, which they can use as an identity file (_ssh -i_)
-* 
+* Now we are good to add node from UI
+```
+Manage Jenkins -- Manage nodes and cloud -- New node -- Node name : whatever best suits and type : permanent agent 
+In the second screen 
+Name - whatever best suits you 
+Description - whatever best suits you 
+Number of executors : 2
+Remote root directory : /apps/jenkins-agent
+Label : uniquely identify node
+Usage : use this node as much as possible 
+Host : IP of node
+Credentials : Add ssh private key in jenins system credentials 
+Host Key Verification Strategy : Non verifying 
+Availability : online as much as possible
+```
+
 
