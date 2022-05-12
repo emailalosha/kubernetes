@@ -64,6 +64,7 @@ NETMASK=255.255.255.0
 ```
 yum install net-tools -y
 yum install wget -y
+yum install unzip -y
 ```
 ## How to connect using X11 forwarding 
 
