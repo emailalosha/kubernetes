@@ -64,5 +64,13 @@ NETMASK=255.255.255.0
 yum install net-tools -y
 yum install wget -y
 ```
+## How to connect using X11 forwarding 
+
+* Make sure you have ***X11Forwarding yes*** in /etc/ssh/sshd_config file
+* Add IP and FQDN of linux host where you want to open X11 in X0.hosts file of Xming
+* Once you login to linux host (make sure to enable X11 forwarding) set DISPLAY variable 
+```
+export DISPLAY=IP_OF_LOCAL_HOST:0.0
+```
 
 
