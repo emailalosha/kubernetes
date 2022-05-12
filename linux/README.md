@@ -73,5 +73,10 @@ yum install wget -y
 ```
 export DISPLAY=IP_OF_LOCAL_HOST:0.0
 ```
+# How to untar in a specific directory
+
+```
+tar -zxvf jdk-7u80-linux-x64.tar.gz -C /apps/oud/jdk
+```
 
 
