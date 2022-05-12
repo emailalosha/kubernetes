@@ -58,4 +58,11 @@ NETMASK=255.255.255.0
         
 ![Untitled](https://user-images.githubusercontent.com/63675131/165819921-a6286cc4-fd1e-4ca5-9266-e0e42bc47c17.png)
 
+## Pre-req software on linux host
+
+```
+yum install net-tools -y
+yum install wget -y
+```
+
 
