@@ -43,7 +43,8 @@ NETMASK=255.255.255.0
         useradd jenkins 
 
 ## Reset password of a user - jenkins
-        passwd jenkins 
+        passwd jenkins
+        echo "oud:Jaiho211." |  chpasswd
         
 ## To add a user - jenkins into group - docker
         usermod -a -G docker jenkins
